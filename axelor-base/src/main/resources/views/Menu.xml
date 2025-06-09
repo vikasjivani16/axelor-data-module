@@ -10,6 +10,36 @@
   <menuitem title="Mailing lists" name="menu-mail-mailing-list" parent="menu-mail"
     order="-75"/>
 
+  <menuitem title="Online Data" name="data-scrapping-menu" parent="" order="100"
+    icon="chat-dots"/>
+
+  <menuitem title="Online Site Data" name="online-site-data-menu"
+    parent="data-scrapping-menu" action="online.site.data.list" order="200"/>
+
+  <action-view name="online.site.data.list" title="Online Site Data"
+    model="com.axelor.apps.base.db.OnlineSiteUserData">
+    <view type="grid" name="online-site-user-data-grid"/>
+    <view type="form" name="online-site-user-data-form"/>
+  </action-view>
+
+  <menuitem title="Aluminium Data" name="aluminium-data-menu" parent="data-scrapping-menu"
+    action="aluminium.data.list" order="200"/>
+
+  <action-view name="aluminium.data.list" title="Aluminium Data"
+    model="com.axelor.apps.base.db.AluminiumData">
+    <view type="grid" name="aluminium-data-grid"/>
+    <view type="form" name="aluminium-data-form"/>
+  </action-view>
+
+  <menuitem title="User Account" name="user-account-menu" parent="data-scrapping-menu"
+    action="user.account.list" order="900"/>
+
+  <action-view name="user.account.list" title="User Account"
+    model="com.axelor.apps.base.db.UserAccount">
+    <view type="grid" name="user-account-data-grid"/>
+    <view type="form" name="user-account-data-form"/>
+  </action-view>
+
   <menuitem title="My Mailing lists" name="menu-mail-my-mailing-list"
     parent="menu-mail-mailing-list" action="menu.mail.my.mailing.list" order="100"/>
   <menuitem title="All Mailing lists" name="menu-mail-all-mailing-list"

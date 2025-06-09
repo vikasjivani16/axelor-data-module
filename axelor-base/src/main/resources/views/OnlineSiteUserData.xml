@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_7.2.xsd">
+
+  <grid name="online-site-user-data-grid" title="Online Site User Data"
+    model="com.axelor.apps.base.db.OnlineSiteUserData">
+
+    <field name="name" title="Name"/>
+    <field name="userEmail" title="User Email"/>
+    <field name="confirmEmail" title="Confirm Email"/>
+    <field name="userGroup" title="User Group"/>
+    <field name="phone" title="Phone"/>
+    <field name="fax" title="Fax"/>
+    <field name="zipCode" title="Zip Code"/>
+    <field name="userCountry" title="User Country"/>
+    <field name="province" title="Province"/>
+    <field name="userSince" title="User Since"/>
+    <field name="accountCreated" title="Account Created"/>
+    <field name="website" title="Website"/>
+    <field name="billAddress" title="Billing Address"/>
+    <field name="shippingAddress" title="Shipping Address"/>
+    <field name="dateOfBirth" title="Date of Birth"/>
+    <field name="taxVatNum" title="Tax/VAT Number"/>
+    <field name="vatNum" title="VAT Number"/>
+    <field name="gender" title="Gender"/>
+    <field name="streetAddress" title="Street Address"/>
+    <field name="userCity" title="User City"/>
+    <field name="company" title="Company"/>
+    <field name="billingFirstName" title="Billing First Name"/>
+    <field name="billingLastName" title="Billing Last Name"/>
+    <field name="accountLock" title="Account Lock"/>
+
+  </grid>
+
+  <form name="online-site-user-data-form" title="Online Site User Data"
+    model="com.axelor.apps.base.db.OnlineSiteUserData">
+    <panel name="mainPanel">
+      <field name="name" title="Name"/>
+      <field name="userEmail" title="User Email"/>
+      <field name="confirmEmail" title="Confirm Email"/>
+      <field name="userGroup" title="User Group"/>
+      <field name="phone" title="Phone"/>
+      <field name="fax" title="Fax"/>
+      <field name="zipCode" title="Zip Code"/>
+      <field name="userCountry" title="User Country"/>
+      <field name="province" title="Province"/>
+      <field name="userSince" title="User Since"/>
+      <field name="accountCreated" title="Account Created"/>
+      <field name="website" title="Website"/>
+      <field name="billAddress" title="Billing Address"/>
+      <field name="shippingAddress" title="Shipping Address"/>
+      <field name="dateOfBirth" title="Date of Birth"/>
+      <field name="taxVatNum" title="Tax/VAT Number"/>
+      <field name="vatNum" title="VAT Number"/>
+      <field name="gender" title="Gender"/>
+      <field name="streetAddress" title="Street Address"/>
+      <field name="userCity" title="User City"/>
+      <field name="company" title="Company"/>
+      <field name="billingFirstName" title="Billing First Name"/>
+      <field name="billingLastName" title="Billing Last Name"/>
+      <field name="accountLock" title="Account Lock"/>
+    </panel>
+  </form>
+</object-views>

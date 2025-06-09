@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_7.2.xsd">
+
+  <grid name="aluminium-data-grid" title="Aluminium Data"
+    model="com.axelor.apps.base.db.AluminiumData">
+
+    <field name="importId" title="Import ID"/>
+    <field name="importerName" title="Importer Name"/>
+    <field name="address" title="Address"/>
+    <field name="city" title="City"/>
+    <field name="chaNo" title="CHA No"/>
+    <field name="chaName" title="CHA Name"/>
+    <field name="countryOrigin" title="Country of Origin"/>
+    <field name="hsCode" title="HS Code"/>
+    <field name="goodsDescription" title="Goods Description"/>
+    <field name="quantity" title="Quantity"/>
+    <field name="unit" title="Unit"/>
+    <field name="unitPriceUsd" title="Unit Price (USD)"/>
+    <field name="totalValueUsd" title="Total Value (USD)"/>
+    <field name="totalDutyUsd" title="Total Duty (USD)"/>
+    <field name="loadingPort" title="Loading Port"/>
+    <field name="invCurrency" title="Invoice Currency"/>
+    <field name="supplierName" title="Supplier Name"/>
+    <field name="supplierAddress" title="Supplier Address"/>
+    <field name="beType" title="BE Type"/>
+    <field name="iecPhone" title="IEC Phone"/>
+    <field name="iecEmail" title="IEC Email"/>
+    <field name="iecContact" title="IEC Contact"/>
+
+  </grid>
+
+  <form name="aluminium-data-form" title="Aluminium Data"
+    model="com.axelor.apps.base.db.AluminiumData">
+    <panel name="mainPanel">
+      <field name="importId" title="Import ID"/>
+      <field name="importerName" title="Importer Name"/>
+      <field name="address" title="Address"/>
+      <field name="city" title="City"/>
+      <field name="chaNo" title="CHA No"/>
+      <field name="chaName" title="CHA Name"/>
+      <field name="countryOrigin" title="Country of Origin"/>
+      <field name="hsCode" title="HS Code"/>
+      <field name="goodsDescription" title="Goods Description"/>
+      <field name="quantity" title="Quantity"/>
+      <field name="unit" title="Unit"/>
+      <field name="unitPriceUsd" title="Unit Price (USD)"/>
+      <field name="totalValueUsd" title="Total Value (USD)"/>
+      <field name="totalDutyUsd" title="Total Duty (USD)"/>
+      <field name="loadingPort" title="Loading Port"/>
+      <field name="invCurrency" title="Invoice Currency"/>
+      <field name="supplierName" title="Supplier Name"/>
+      <field name="supplierAddress" title="Supplier Address"/>
+      <field name="beType" title="BE Type"/>
+      <field name="iecPhone" title="IEC Phone"/>
+      <field name="iecEmail" title="IEC Email"/>
+      <field name="iecContact" title="IEC Contact"/>
+
+    </panel>
+  </form>
+</object-views>

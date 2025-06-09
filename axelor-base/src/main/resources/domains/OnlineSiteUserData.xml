@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_7.2.xsd">
+
+  <module name="base" package="com.axelor.apps.base.db"/>
+
+  <entity name="OnlineSiteUserData">
+
+    <string name="name" title="Name"/>
+    <string name="userEmail" title="User Email"/>
+    <string name="confirmEmail" title="Confirm Email"/>
+    <string name="userGroup" title="User Group"/>
+    <string name="phone" title="Phone"/>
+    <string name="fax" title="Fax"/>
+    <string name="zipCode" title="Zip Code"/>
+    <string name="userCountry" title="User Country"/>
+    <string name="province" title="Province"/>
+    <string name="userSince" title="User Since"/>
+    <string name="accountCreated" title="Account Created"/>
+    <string name="website" title="Website"/>
+    <string name="billAddress" title="Billing Address"/>
+    <string name="shippingAddress" title="Shipping Address"/>
+    <string name="dateOfBirth" title="Date of Birth"/>
+    <string name="taxVatNum" title="Tax/VAT Number"/>
+    <string name="vatNum" title="VAT Number"/>
+    <string name="gender" title="Gender"/>
+    <string name="streetAddress" title="Street Address"/>
+    <string name="userCity" title="User City"/>
+    <string name="company" title="Company"/>
+    <string name="billingFirstName" title="Billing First Name"/>
+    <string name="billingLastName" title="Billing Last Name"/>
+    <string name="accountLock" title="Account Lock"/>
+
+  </entity>
+
+</domain-models>

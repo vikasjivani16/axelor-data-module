@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_7.2.xsd">
+
+  <module name="base" package="com.axelor.apps.base.db"/>
+
+  <entity name="AluminiumData">
+
+    <string name="importId" title="Import ID"/>
+    <string name="importerName" title="Importer Name"/>
+    <string name="address" title="Address"/>
+    <string name="city" title="City"/>
+    <string name="chaNo" title="CHA No"/>
+    <string name="chaName" title="CHA Name"/>
+    <string name="countryOrigin" title="Country of Origin"/>
+    <string name="hsCode" title="HS Code"/>
+    <string name="goodsDescription" title="Goods Description"/>
+    <string name="quantity" title="Quantity"/>
+    <string name="unit" title="Unit"/>
+    <string name="unitPriceUsd" title="Unit Price (USD)"/>
+    <string name="totalValueUsd" title="Total Value (USD)"/>
+    <string name="totalDutyUsd" title="Total Duty (USD)"/>
+    <string name="loadingPort" title="Loading Port"/>
+    <string name="invCurrency" title="Invoice Currency"/>
+    <string name="supplierName" title="Supplier Name"/>
+    <string name="supplierAddress" title="Supplier Address"/>
+    <string name="beType" title="BE Type"/>
+    <string name="iecPhone" title="IEC Phone"/>
+    <string name="iecEmail" title="IEC Email"/>
+    <string name="iecContact" title="IEC Contact"/>
+
+  </entity>
+
+</domain-models>
