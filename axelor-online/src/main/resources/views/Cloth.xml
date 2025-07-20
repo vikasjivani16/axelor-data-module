@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_7.2.xsd">
+
+  <grid name="cloth-grid" title="Cloth" model="com.axelor.apps.online.db.Cloth">
+    <field name="productImage" widget="Image"/>
+    <field name="name"/>
+    <field name="xsQtyTotal" title="Total XS"/>
+    <field name="sQtyTotal" title="Total S"/>
+    <field name="mQtyTotal" title="Total M"/>
+    <field name="lQtyTotal" title="Total L"/>
+    <field name="xlQtyTotal" title="Total XL"/>
+    <field name="xxlQtyTotal" title="Total XXL"/>
+  </grid>
+
+  <form name="cloth-form" title="Cloth" model="com.axelor.apps.online.db.Cloth" width="large"
+    onNew="" onLoad="">
+    <panel colSpan="12">
+      <panel name="mainPanel" colSpan="6">
+        <field name="productImage" showTitle="false" colSpan="6" widget="Image"/>
+      </panel>
+
+      <panel name="mainPanel" colSpan="6">
+        <field name="name" colSpan="6"/>
+      </panel>
+    </panel>
+    <panel colSpan="12" readonly="true">
+      <field name="xsQtyTotal" title="XS" colSpan="2"/>
+      <field name="sQtyTotal" title="S" colSpan="2"/>
+      <field name="mQtyTotal" title="M" colSpan="2"/>
+      <field name="lQtyTotal" title="L" colSpan="2"/>
+      <field name="xlQtyTotal" title="XL" colSpan="2"/>
+      <field name="xxlQtyTotal" title="XXL" colSpan="2"/>
+    </panel>
+
+    <panel-tabs>
+      <panel title="Order Info">
+        <panel-related field="orderLine" canEdit="true"
+          onChange="save,action-online-cloth-calculate-qty,save" grid-view="online-order-line-grid"
+          editable="true"/>
+        <panel-related field="returnOrderLine" canEdit="true"
+          onChange="save,action-online-cloth-calculate-qty,save"
+          grid-view="online-return-order-line-grid" editable="true"/>
+        <panel colSpan="6">
+          <field name="xsQtyOrder" title="Order XS" colSpan="2"/>
+          <field name="sQtyOrder" title="Order S" colSpan="2"/>
+          <field name="mQtyOrder" title="Order M" colSpan="2"/>
+          <field name="lQtyOrder" title="Order L" colSpan="2"/>
+          <field name="xlQtyOrder" title="Order XL" colSpan="2"/>
+          <field name="xxlQtyOrder" title="Order XXL" colSpan="2"/>
+        </panel>
+        <panel colSpan="6">
+          <field name="xsQtyReturn" title="Return XS" colSpan="2"/>
+          <field name="sQtyReturn" title="Return S" colSpan="2"/>
+          <field name="mQtyReturn" title="Return M" colSpan="2"/>
+          <field name="lQtyReturn" title="Return L" colSpan="2"/>
+          <field name="xlQtyReturn" title="Return XL" colSpan="2"/>
+          <field name="xxlQtyReturn" title="Return XXL" colSpan="2"/>
+        </panel>
+      </panel>
+
+      <panel title="Stock">
+        <panel-related field="stockLine" colSpan="6" canEdit="true"
+          onChange="save,action-online-cloth-calculate-qty,save" grid-view="online-stock-line-grid"
+          editable="true"/>
+        <spacer colSpan="6"/>
+        <panel colSpan="6">
+          <field name="xsQtyStock" title="Stock XS" colSpan="2"/>
+          <field name="sQtyStock" title="Stock S" colSpan="2"/>
+          <field name="mQtyStock" title="Stock M" colSpan="2"/>
+          <field name="lQtyStock" title="Stock L" colSpan="2"/>
+          <field name="xlQtyStock" title="Stock XL" colSpan="2"/>
+          <field name="xxlQtyStock" title="Stock XXL" colSpan="2"/>
+        </panel>
+      </panel>
+    </panel-tabs>
+  </form>
+
+  <action-method name="action-online-cloth-calculate-qty">
+    <call class="com.axelor.apps.base.web.ClothController" method="calculateTotalQty"/>
+  </action-method>
+
+</object-views>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_7.2.xsd">
+
+  <grid name="online-order-line-grid" title="Order Line"
+    model="com.axelor.apps.online.db.OrderLine" canEdit="true">
+    <field name="orderDate" title="Order Date" required="true"/>
+    <field name="clothSize" title="Size" selection="online.order.line.size"/>
+    <field name="orderQty" title="Order Qty"/>
+    <field name="note" title="Note"/>
+  </grid>
+
+  <form name="online-order-line-form" title="Order Line"
+    model="com.axelor.apps.online.db.OrderLine" width="large" onNew="" onLoad="">
+    <panel name="mainPanel">
+      <field name="orderDate" title="Order Date" required="true"/>
+      <field name="clothSize" title="Size" selection="online.order.line.size"/>
+      <field name="orderQty" title="Order Qty"/>
+      <field name="note" title="Note"/>
+    </panel>
+  </form>
+
+</object-views>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_7.2.xsd">
+
+  <module name="online" package="com.axelor.apps.online.db"/>
+
+  <entity name="Cloth">
+
+    <string name="name" title="Name" required="true"/>
+    <many-to-one ref="com.axelor.meta.db.MetaFile" name="productImage" title="Image"/>
+    <string name="notes" title="Notes" large="true"/>
+
+    <string name="sizeXs" title="XS"/>
+    <string name="sizeS" title="S"/>
+    <string name="sizeM" title="M"/>
+    <string name="sizeL" title="L"/>
+    <string name="sizeXl" title="XL"/>
+    <string name="sizeXxl" title="XXL"/>
+
+    <decimal name="xsQtyOrder" title="Order XS"/>
+    <decimal name="sQtyOrder" title="Order S"/>
+    <decimal name="mQtyOrder" title="Order M"/>
+    <decimal name="lQtyOrder" title="Order L"/>
+    <decimal name="xlQtyOrder" title="Order XL"/>
+    <decimal name="xxlQtyOrder" title="Order XXL"/>
+
+    <decimal name="xsQtyReturn" title="Return XS"/>
+    <decimal name="sQtyReturn" title="Return S"/>
+    <decimal name="mQtyReturn" title="Return M"/>
+    <decimal name="lQtyReturn" title="Return L"/>
+    <decimal name="xlQtyReturn" title="Return XL"/>
+    <decimal name="xxlQtyReturn" title="Return XXL"/>
+
+    <decimal name="xsQtyStock" title="Stock XS"/>
+    <decimal name="sQtyStock" title="Stock S"/>
+    <decimal name="mQtyStock" title="Stock M"/>
+    <decimal name="lQtyStock" title="Stock L"/>
+    <decimal name="xlQtyStock" title="Stock XL"/>
+    <decimal name="xxlQtyStock" title="Stock XXL"/>
+
+    <decimal name="xsQtyTotal" title="Total XS"/>
+    <decimal name="sQtyTotal" title="Total S"/>
+    <decimal name="mQtyTotal" title="Total M"/>
+    <decimal name="lQtyTotal" title="Total L"/>
+    <decimal name="xlQtyTotal" title="Total XL"/>
+    <decimal name="xxlQtyTotal" title="Total XXL"/>
+
+    <one-to-many ref="com.axelor.apps.online.db.OrderLine" name="orderLine"
+      mappedBy="cloth" title="Order Line"/>
+    <one-to-many ref="com.axelor.apps.online.db.ReturnOrderLine" name="returnOrderLine"
+      mappedBy="cloth" title="Return Order Line"/>
+    <one-to-many ref="com.axelor.apps.online.db.StockLine" name="stockLine"
+      mappedBy="cloth" title="Stock Line"/>
+
+  </entity>
+
+</domain-models>

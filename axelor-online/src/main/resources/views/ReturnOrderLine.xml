@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_7.2.xsd">
+
+  <grid name="online-return-order-line-grid" title="Return Order Line"
+    model="com.axelor.apps.online.db.ReturnOrderLine" canEdit="true">
+    <field name="returnOrderDate" title="Return Date" required="true"/>
+    <field name="clothSize" title="Size" selection="online.order.line.size" canEdit="true"/>
+    <field name="returnQty" title="Return Qty" canEdit="true"/>
+    <field name="note" title="Note" canEdit="true"/>
+  </grid>
+
+  <form name="online-return-order-line-form" title="Return Order Line"
+    model="com.axelor.apps.online.db.ReturnOrderLine" width="large" onNew="" onLoad="">
+    <panel name="mainPanel">
+      <field name="returnOrderDate" title="Return Date" required="true"/>
+      <field name="clothSize" title="Size" selection="online.order.line.size"/>
+      <field name="returnQty" title="Return Qty"/>
+      <field name="note" title="Note"/>
+
+
+    </panel>
+  </form>
+
+</object-views>

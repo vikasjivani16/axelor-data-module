@@ -10,6 +10,19 @@
   <menuitem title="Mailing lists" name="menu-mail-mailing-list" parent="menu-mail"
     order="-75"/>
 
+  <menuitem title="Online Sale" name="online-sale-menu" parent="" order="100"
+    icon="chat-dots"/>
+
+  <menuitem title="Cloth" name="online-sale-cloth-menu" parent="online-sale-menu"
+    action="online.sale.cloth.sale" order="200"/>
+
+  <action-view name="online.sale.cloth.sale" title="Cloth"
+    model="com.axelor.apps.online.db.Cloth">
+    <view type="grid" name="cloth-grid"/>
+    <view type="form" name="cloth-form"/>
+  </action-view>
+
+
   <menuitem title="Online Data" name="data-scrapping-menu" parent="" order="100"
     icon="chat-dots"/>
 

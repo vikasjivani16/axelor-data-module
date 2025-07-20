@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_7.2.xsd">
+
+  <module name="online" package="com.axelor.apps.online.db"/>
+
+  <entity name="ReturnOrderLine">
+
+    <date name="returnOrderDate" title="Return Date" required="true"/>
+    <string name="clothSize" title="Size" selection="online.order.line.size"/>
+    <decimal name="returnQty" title="Return Qty"/>
+    <string name="note" title="Note"/>
+
+    <many-to-one ref="com.axelor.apps.online.db.Cloth" name="cloth" title="Cloth"/>
+
+  </entity>
+
+</domain-models>
